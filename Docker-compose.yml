@@ -22,7 +22,7 @@ services:
   # Database Service (Mysql)
   db:
     image: mysql:latest
-    container_name: mysql_cont
+    container_name: mysql_mezghich_cont
     volumes:
       - mezghich_db_ams_vol:/var/lib/mysql
     restart: always
@@ -37,7 +37,7 @@ services:
   # phpmyadmin Service
   phpmyadmin:
     image: phpmyadmin
-    container_name: pmadmin_cont
+    container_name: pmadmin_mezghich_cont
     depends_on:
       - db
     restart: always
