@@ -16,7 +16,7 @@ pipeline {
                         sh 'docker compose -f Docker-compose.yml up -d'
                     }
          }
-         stage('tag and push image to dockerhub') {
+         stage('tag and push image to dockerhub de mezghich') {
                      steps {
                          echo "tag and push image ..."
                          sh "docker tag mezghich_amsdata_2025 aminesip/mezghich_amsdata_2025"
