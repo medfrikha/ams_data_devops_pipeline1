@@ -5,10 +5,10 @@ version: '3.3'
 services:
   # spring service
   app:
-    image: mezghich_ams_2024
+    image: mezghich_amsdata_2025
     ports:
-      - "8099:8080"
-    container_name: mezghich_ams_2024_cont
+      - "8090:8080"
+    container_name: mezghich_amsdata_2025_cont
     depends_on:
       - db
     restart: always

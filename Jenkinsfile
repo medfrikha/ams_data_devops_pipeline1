@@ -1,21 +1,17 @@
 pipeline {
     agent any
     stages {
-        stage('Salutation à tout le monde devops') {
-            steps {
-                echo 'Bonjour tout le monde'
-            }
-        }
-        stage('Début du pipeline ...') {
-            steps {
-                echo 'Chargement'
-            }
-        }
+
         stage('Création image Docker') {
             steps {
-                sh 'docker build -t mezghich_ams_2024 .'
+                sh 'docker build -t mezghich_amsdata_2025 .'
             }
         }
+         stage('Lancement de la Stack Docker-Compose') {
+                    steps {
+                        sh 'docker compose -f Docker-compose.yml up -d'
+                    }
+         }
     }
 }
 
