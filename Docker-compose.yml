@@ -7,7 +7,7 @@ services:
   app:
     image: frikha_amsdata_2025
     ports:
-      - "8090:8080"
+      - "8090:8081"
     container_name: frikha_amsdata_2025_cont
     depends_on:
       - db
