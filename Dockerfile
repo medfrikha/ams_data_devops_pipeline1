@@ -14,7 +14,7 @@ COPY src ./src
 RUN mvn clean install -DskipTests
 
 # Utiliser l'image officielle OpenJDK comme étape d'exécution
-FROM openjdk:17-jdk-alpine
+FROM openjdk:17-jdk-slim
 
 # Définir le répertoire de travail à /app dans le conteneur
 WORKDIR /app
